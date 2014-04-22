@@ -3,6 +3,6 @@
     "description": "Extends the Session API, with toggle() and clear() methods.",
     "homepage": "https://github.com/awatson1978/session-extended-api",
     "author": "Abigail Watson  (http://www.pentasyllabic.com)",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "git": "https://github.com/awatson1978/session-extended-api.git"
 }
