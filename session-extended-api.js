@@ -18,3 +18,15 @@ Session.remove = function(session_variable){
   Session.set(session_variable, undefined);
   return true;
 };
+
+Session.setAll = function(object){
+  console.log('object', object);
+
+  for (var key in object) {
+    if(object.hasOwnProperty(key)){
+      console.log(key + " = " + object[key]);
+      Session.set(key, object[key]);
+    }
+  }
+  return true;
+};

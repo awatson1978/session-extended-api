@@ -24,14 +24,19 @@ Tinytest.add('session - clear()', function (test) {
   Session.set('bar', false);
   test.equal(Session.get('bar'), false);
 
-  Session.toggle('bar');
-  test.equal(Session.get('bar'), true);
+  Session.clear('bar');
+  test.equal(Session.get('bar'), null);
 
-  Session.toggle('bar');
-  test.equal(Session.get('bar'), false);
-
-// This is so the test passes the next time, after hot code push.  I know it
-  // doesn't return it to the completely untouched state, but we don't have
-  // Session.clear() yet.  When we do, this should be that.
   delete Session.keys['foo'];
+});
+
+
+Tinytest.add('session - setAll()', function (test) {
+  Session.setAll({fruit: 'apple', vegetable: 'potato'});
+
+  test.equal(Session.get('fruit'), 'apple');
+  test.equal(Session.get('vegetable'), 'potato');
+
+  delete Session.keys['fruit'];
+  delete Session.keys['vegetable'];
 });

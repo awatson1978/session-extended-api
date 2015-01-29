@@ -1,6 +1,14 @@
 Package.describe({
   summary: "Extends the Session API",
-  internal: true
+
+  // update this value before you run 'meteor publish'
+  version: "1.0.0",
+
+  // if this value isn't set, meteor will default to the directory name
+  name: "clinical:session-extended-api",
+
+  // and add this value if you want people to access your code from Atmosphere
+  git: "http://github.com/awatson1978/session-extended-api.git"
 });
 
 Package.on_use(function (api) {
